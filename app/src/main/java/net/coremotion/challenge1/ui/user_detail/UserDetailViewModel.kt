@@ -27,5 +27,9 @@ class UserDetailViewModel @Inject constructor(
                 _userDetailFlow.value = resource
             }
         }
+        suspend fun getUserDetail(userId: Int) {
+            val resource = userRepository.getUserDetail(userId)
+            _userDetailFlow.value = resource
+        }
     }
 }

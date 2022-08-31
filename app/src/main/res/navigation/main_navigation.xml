@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/newsFragment">
+    app:startDestination="@id/usersFragment">
 
     <fragment
-        android:id="@+id/newsFragment"
+        android:id="@+id/usersFragment"
         android:name="net.coremotion.challenge1.ui.users.UsersFragment"
         android:label="news_fragment"
         tools:layout="@layout/users_fragment" >
         <action
-            android:id="@+id/action_newsFragment_to_userDetailFragment"
-            app:destination="@id/userDetailFragment" />
+            android:id="@+id/action_usersFragment_to_userDetailFragment"
+            app:destination="@id/toUserDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userDetailFragment"
+        android:id="@+id/toUserDetailFragment"
         android:name="net.coremotion.challenge1.ui.user_detail.UserDetailFragment"
         android:label="fragment_user_detail"
         tools:layout="@layout/fragment_user_detail" >

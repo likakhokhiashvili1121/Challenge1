@@ -36,7 +36,7 @@ class UserRepository @Inject constructor(
             } else {
                 Resource.error(response.message())
             }
-            exitProcess(0)
+           // exitProcess(0)
         } catch (e: Exception) {
             Resource.error(e.message.toString())
         }

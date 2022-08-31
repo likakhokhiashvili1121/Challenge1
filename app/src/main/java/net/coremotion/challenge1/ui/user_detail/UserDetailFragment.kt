@@ -19,14 +19,20 @@ class UserDetailFragment :
 
 
     override fun start() {
-        observes()
         viewModel.getUserDetail(args.userId)
         setListeners()
+        observes()
     }
 
     private fun setListeners() {
         binding.swipeRefresh.setOnRefreshListener {
-            viewModel.getUserDetail(args.userId)
+            getUserDetails(args.userId)
+        }
+    }
+
+    private fun getUserDetails(userId: Int) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.getUserDetail(userId = userId)
         }
     }
 

@@ -4,6 +4,8 @@ package net.coremotion.challenge1.ui.users
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -28,24 +30,26 @@ class UsersFragment : BaseFragment<UsersFragmentBinding>(UsersFragmentBinding::i
     private fun setListeners() {
         binding.swipeRefresh.setOnRefreshListener {
             usersAdapter.refresh()
+
+        }
+        usersAdapter.userItemOnClick = {
+            openUserDetail(userId = it)
         }
     }
 
     private fun initUsersRecyclerView() {
         binding.usersRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            usersAdapter = UsersAdapter().apply {
-                userItemOnClick = {
-                    openUserDetail(it)
-                }
-            }
+            usersAdapter = UsersAdapter()
             adapter = usersAdapter
         }
     }
 
     private fun openUserDetail(userId: Int) {
-        UsersFragmentDirections.actionNewsFragmentToUserDetailFragment(
-            userId
+        findNavController().navigate(
+            UsersFragmentDirections.toUserDetailFragment(
+                userId
+            )
         )
     }
 

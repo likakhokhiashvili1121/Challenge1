@@ -3,6 +3,7 @@
     package="net.coremotion.challenge1">
 
     <uses-permission android:name="android.permission.INTERACT_ACROSS_PROFILE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".App"
