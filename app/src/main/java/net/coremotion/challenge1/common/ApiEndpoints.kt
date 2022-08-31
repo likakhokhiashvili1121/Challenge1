@@ -1,4 +1,4 @@
-package net.coremotion.challenge1.grisha
+package net.coremotion.challenge1.common
 
 object ApiEndpoints {
     const val BASE_URL = "https://reqres.in/api/"

@@ -2,9 +2,9 @@ package net.coremotion.challenge1.ui.users.source
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import net.coremotion.challenge1.domain.model.Users
 import net.coremotion.challenge1.domain.reposoitory.UserRepository
 import net.coremotion.challenge1.common.Resource
+import net.coremotion.challenge1.domain.model.Users
 
 class UsersPagingSource(private val userRepository: UserRepository) :
     PagingSource<Int, Users.Data>() {

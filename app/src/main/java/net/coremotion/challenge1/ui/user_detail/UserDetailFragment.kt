@@ -1,16 +1,14 @@
 package net.coremotion.challenge1.ui.user_detail
 
-import android.util.Log.d
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 import net.coremotion.challenge1.common.Resource
 import net.coremotion.challenge1.databinding.FragmentUserDetailBinding
 import net.coremotion.challenge1.extensions.setImage
 import net.coremotion.challenge1.ui.base.BaseFragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class UserDetailFragment :

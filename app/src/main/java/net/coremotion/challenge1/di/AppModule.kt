@@ -6,9 +6,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import net.coremotion.challenge1.common.ApiEndpoints
 import net.coremotion.challenge1.data.remote.ApiService
 import net.coremotion.challenge1.domain.reposoitory.UserRepository
+import net.coremotion.challenge1.common.ApiEndpoints
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

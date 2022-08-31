@@ -1,4 +1,4 @@
-
+package net.coremotion.challenge1.domain.model
 
 
 import com.squareup.moshi.Json

@@ -1,10 +1,8 @@
 package net.coremotion.challenge1.data.remote
 
 import Users
-import net.coremotion.challenge1.common.ApiEndpoints
 import net.coremotion.challenge1.domain.model.UserDetail
-import net.coremotion.challenge1.domain.model.Users
-import net.coremotion.challenge1.grisha.ApiEndpoints
+import net.coremotion.challenge1.common.ApiEndpoints
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

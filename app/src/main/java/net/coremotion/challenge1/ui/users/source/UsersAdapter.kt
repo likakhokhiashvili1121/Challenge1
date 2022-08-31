@@ -41,6 +41,10 @@ class UsersAdapter() : PagingDataAdapter<Users.Data, UsersAdapter.UserViewHolder
         private fun setListeners() {
             binding.root.setOnClickListener(this)
         }
+
+        override fun onClick(v: View?) {
+            TODO("Not yet implemented")
+        }
     }
 }
 

@@ -1,6 +1,5 @@
 package net.coremotion.challenge1.domain.reposoitory
 
-import Users
 import net.coremotion.challenge1.data.remote.ApiService
 import net.coremotion.challenge1.common.Resource
 import net.coremotion.challenge1.domain.model.UserDetail
@@ -12,7 +11,7 @@ class UserRepository @Inject constructor(
     private val api: ApiService
 ) {
     suspend fun getUsers(page: Int): Resource<Users> {
-        exitProcess(0)
+        //exitProcess(0)
         return try {
             Resource.loading(null)
             val response = api.getUsers(page)
